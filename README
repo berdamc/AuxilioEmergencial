@@ -9,3 +9,4 @@ Orientações
 2 - No arquivo SeparaAuxilioPorCidade.py
     Na linha 10, renomear para o mês respectivo
     Na linha 40, informar o nome da pasta a ser criado os arquivos separado por cidade
+    Na linha 45, informar o arquivo CSV que foi baixado do Portal da Transparência
