@@ -46,7 +46,7 @@ with open('dados05.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=';')
     line_count = 0
     MunicipioAnterior = 'PessoasSemMunicipio'
-    UFAnterior = 'PessoasSemEstado'
+    UFAnterior = 'PessoasSemEstado' llll
     for row in csv_reader:
         if line_count > 0:
             if row:
