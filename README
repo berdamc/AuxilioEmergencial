@@ -1,0 +1,11 @@
+Programação realizada com o objetivo de separar os dados obtidos no Portal da Transparência
+e separá-los por cidade em formatdo PDF.
+
+Orientações
+
+1 - Baixe os arquivos CSV deste link
+    http://www.portaltransparencia.gov.br/pagina-interna/603519-download-de-dados-auxilio-emergencial
+
+2 - No arquivo SeparaAuxilioPorCidade.py
+    Na linha 10, renomear para o mês respectivo
+    Na linha 40, informar o nome da pasta a ser criado os arquivos separado por cidade
