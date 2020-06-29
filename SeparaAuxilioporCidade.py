@@ -15,7 +15,7 @@ def GeneratePDF(lista,nome_pdf,cidadeUF):
         pdf.drawCentredString(300, 700, 'Beneficiários de ' + cidadeUF)
         pdf.setFont("Helvetica", 12)
 
-        pdf.drawString(50, 670, 'Name')
+        pdf.drawString(50, 670, 'Nome')
         pdf.drawCentredString(400,670, 'CPF')
         pdf.drawRightString(550, 670, 'Valor')
         pdf.setFillColorRGB(0, 0, 0)
