@@ -7,16 +7,16 @@ def GeneratePDF(lista,nome_pdf,cidadeUF):
         pdf = canvas.Canvas(nome_pdf)
         pdf.setTitle(cidadeUF)
         pdf.setFont("Helvetica-Bold", 15)
-        pdf.drawCentredString(300, 800, ' Lista do Auxílio Emergencial - Dados do Portal da Transparência - Abril/2020 ')
+        pdf.drawCentredString(300, 800, ' Lista do Auxílio Emergencial - Dados do Portal da Transparência - Junho/2021 ')
         pdf.setFont("Helvetica-Bold", 12)
         pdf.drawCentredString(300, 770, '  Denúncias e consultas devem ser feitas no Portal da Transparência   ')
-        pdf.drawCentredString(300, 750, ' Acesse http://gg.gg/portaltransparencia4, altere os filtros e consulte  ')
-        pdf.drawCentredString(300, 730, ' Para outras cidades/meses/README acesse http://gg.gg/informacoesauxilio ')
+        pdf.drawCentredString(300, 750, '  Acesse http://gg.gg/portalgov2 e altere a consulta')
+        pdf.drawCentredString(300, 730, '  ')
         pdf.drawCentredString(300, 700, 'Beneficiários de ' + cidadeUF)
         pdf.setFont("Helvetica", 12)
 
         pdf.drawString(50, 670, 'Nome')
-        pdf.drawCentredString(400,670, 'CPF')
+        pdf.drawCentredString(400,670, 'CPF')..
         pdf.drawRightString(550, 670, 'Valor')
         pdf.setFillColorRGB(0, 0, 0)
 
@@ -37,12 +37,12 @@ def GeneratePDF(lista,nome_pdf,cidadeUF):
         print('Erro ao gerar {}.pdf'.format(nome_pdf))
 
 dados = []
-pastainicial = 'maio/'
+pastainicial = '2021-06/'
 
 if not os.path.isdir(pastainicial):
     os.mkdir(pastainicial)
 
-with open('dados05.csv') as csv_file:
+with open('202106_AuxilioEmergencial.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=';')
     line_count = 0
     MunicipioAnterior = 'PessoasSemMunicipio'
@@ -85,6 +85,5 @@ with open('dados05.csv') as csv_file:
 if len(dados) > 0:  # se for fim de arquivo, existem maio armazenados na memória que devem ser salvos
    print("Gerando arquivo de",MunicipioAnterior+'-'+UFAnterior)
 GeneratePDF(dados, pastainicial + UFAnterior + '/' + MunicipioAnterior + '.pdf', MunicipioAnterior + '-' + UFAnterior)
-
 
 print("Processamento finalizado !!!")
