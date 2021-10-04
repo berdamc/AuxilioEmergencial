@@ -1,6 +1,6 @@
 import csv
 import os
-from reportlab.pdfgen import canvas
+from reportlab.pdfgen import canvas Teste
 
 def GeneratePDF(lista,nome_pdf,cidadeUF):
     try:
@@ -16,7 +16,7 @@ def GeneratePDF(lista,nome_pdf,cidadeUF):
         pdf.setFont("Helvetica", 12)
 
         pdf.drawString(50, 670, 'Nome')
-        pdf.drawCentredString(400,670, 'CPF')testes
+        pdf.drawCentredString(400,670, 'CPF')
         pdf.drawRightString(550, 670, 'Valor')
         pdf.setFillColorRGB(0, 0, 0)
 
