@@ -1,6 +1,6 @@
 import csv
 import os
-from reportlab.pdfgen import canvas Teste
+from reportlab.pdfgen import canvas
 
 def GeneratePDF(lista,nome_pdf,cidadeUF):
     try:
